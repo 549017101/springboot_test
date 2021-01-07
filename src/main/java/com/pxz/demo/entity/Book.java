@@ -3,6 +3,8 @@ package com.pxz.demo.entity;
 import lombok.Data;
 
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 /**
@@ -15,6 +17,8 @@ public class Book {
 	//属性名要和数据库字段名一一对应
 	
 	@Id
+	//主键自增
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer id;
 	
 	private String name;
